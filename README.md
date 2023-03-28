@@ -43,3 +43,9 @@ Tauri + node
 ### Development
 - Fork and clone [repository](https://github.com/tpiechaczek/tauri-node-playground)
 - Execute `yarn` in root directory
+
+**For local development**
+- run `yarn tauri dev` - first run can take some time, please be patient
+
+**To build the app**
+- run `yarn tauri build`
