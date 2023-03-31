@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-
+import solidPlugin from 'vite-plugin-solid';
 const mobile =
   process.env.TAURI_PLATFORM === "android" ||
   process.env.TAURI_PLATFORM === "ios";
@@ -17,6 +17,9 @@ export default defineConfig(async () => ({
   // to make use of `TAURI_DEBUG` and other env variables
   // https://tauri.studio/v1/api/config#buildconfig.beforedevcommand
   envPrefix: ["VITE_", "TAURI_"],
+  plugins: [
+    solidPlugin()
+  ],
   build: {
     // Tauri supports es2021
     target: process.env.TAURI_PLATFORM == "windows" ? "chrome105" : "safari13",
